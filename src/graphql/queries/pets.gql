@@ -1,0 +1,6 @@
+query GetPets {
+  pets {
+    name
+    id
+  }
+}

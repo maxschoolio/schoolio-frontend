@@ -1,0 +1,76 @@
+{
+  "name": "shcoolio-frontend",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint": "eslint ./src --config ./prod.eslintrc.cjs --ext .js,.jsx,.ts,.tsx --fix",
+    "prettier": "prettier --write .",
+    "graphql-generate": "graphql-codegen --config codegen.yml"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ]
+  },
+  "simple-git-hooks": {
+    "pre-commit": "yarn lint-staged"
+  },
+  "lint-staged": {
+    "*.+(ts|tsx|js|jsx)": [
+      "prettier --write .",
+      "eslint --config ./prod.eslintrc.cjs --fix"
+    ]
+  },
+  "dependencies": {
+    "@apollo/client": "^3.6.9",
+    "@heroicons/react": "^1.0.6",
+    "@hookform/resolvers": "^2.9.7",
+    "clsx": "^1.2.1",
+    "graphql": "^16.5.0",
+    "joi": "^17.6.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.34.2",
+    "react-router-dom": "6",
+    "react-toastify": "^9.0.8"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "2.11.6",
+    "@graphql-codegen/fragment-matcher": "3.3.1",
+    "@graphql-codegen/introspection": "^2.2.1",
+    "@graphql-codegen/schema-ast": "^2.5.1",
+    "@graphql-codegen/typescript": "2.7.3",
+    "@graphql-codegen/typescript-operations": "2.5.3",
+    "@graphql-codegen/typescript-react-apollo": "3.3.3",
+    "@trivago/prettier-plugin-sort-imports": "^3.3.0",
+    "@types/node": "^18.6.3",
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
+    "@types/styled-components": "^5.1.26",
+    "@typescript-eslint/eslint-plugin": "^5.31.0",
+    "@typescript-eslint/parser": "^5.31.0",
+    "@vitejs/plugin-react": "^2.0.0",
+    "apollo": "^2.34.0",
+    "eslint": "^8.20.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.2.4",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.30.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "simple-git-hooks": "^2.8.0",
+    "styled-components": "^5.3.5",
+    "typescript": "^4.6.4",
+    "vite": "^3.0.0"
+  }
+}
